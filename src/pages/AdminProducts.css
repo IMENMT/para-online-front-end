@@ -1,0 +1,647 @@
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.admin-products-page {
+  min-height: 100vh;
+  background: #f5f9f8;
+  padding: 40px 20px 70px;
+}
+
+.admin-products-page > * {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.admin-products-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.admin-section-label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2a9d8f;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.admin-products-header h1 {
+  margin: 0 0 8px;
+  color: #123c3a;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.admin-products-header p {
+  margin: 0;
+  color: #71817f;
+  font-size: 15px;
+}
+
+/* =====================================================
+   BOUTON AJOUTER
+===================================================== */
+
+.add-product-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: #2a9d8f;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.add-product-button:hover {
+  background: #21867a;
+  transform: translateY(-1px);
+}
+
+.add-product-button span {
+  font-size: 20px;
+}
+
+/* =====================================================
+   TOOLBAR
+===================================================== */
+
+.products-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* =====================================================
+   NOMBRE DE PRODUITS
+===================================================== */
+
+.products-count {
+  padding: 7px 14px;
+  border-radius: 20px;
+  background: #e1f3ef;
+  color: #21867a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.products-count strong {
+  margin-right: 4px;
+}
+
+/* =====================================================
+   RECHERCHE
+===================================================== */
+
+.product-search {
+  display: flex;
+  align-items: center;
+  width: 380px;
+  padding: 0 14px;
+  border: 1px solid #dce9e5;
+  border-radius: 10px;
+  background: white;
+  box-sizing: border-box;
+}
+
+.product-search span {
+  margin-right: 8px;
+  color: #71817f;
+  font-size: 20px;
+}
+
+.product-search input {
+  width: 100%;
+  height: 44px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #345653;
+  font-size: 14px;
+}
+
+.product-search input::placeholder {
+  color: #9aa9a5;
+}
+
+.product-search:focus-within {
+  border-color: #2a9d8f;
+  box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.10);
+}
+
+/* =====================================================
+   TABLEAU
+===================================================== */
+
+.products-table-container {
+  overflow-x: auto;
+  border: 1px solid #e1ece9;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 6px 20px rgba(18, 60, 58, 0.06);
+}
+
+.products-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+/* HEADER TABLEAU */
+
+.products-table thead {
+  background: #f8fbfa;
+}
+
+.products-table th {
+  padding: 15px 18px;
+  border-bottom: 1px solid #e1ece9;
+  color: #58706c;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* LIGNES */
+
+.products-table td {
+  padding: 15px 18px;
+  border-bottom: 1px solid #edf2f0;
+  vertical-align: middle;
+}
+
+.products-table tbody tr {
+  transition: 0.2s ease;
+}
+
+.products-table tbody tr:hover {
+  background: #f9fcfb;
+}
+
+.products-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =====================================================
+   INFORMATIONS PRODUIT
+===================================================== */
+
+.product-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 280px;
+}
+
+.product-image-wrapper {
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid #e1ece9;
+  border-radius: 10px;
+  background: #eef6f4;
+}
+
+.product-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #7b9691;
+  font-size: 22px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-details strong {
+  color: #123c3a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.product-details span {
+  display: block;
+  max-width: 280px;
+  overflow: hidden;
+  color: #71817f;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =====================================================
+   CATÉGORIE
+===================================================== */
+
+.category-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 7px;
+  background: #e8f5f2;
+  color: #237c72;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* =====================================================
+   PRIX
+===================================================== */
+
+.product-price {
+  color: #2a9d8f;
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =====================================================
+   STOCK
+===================================================== */
+
+.stock-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.stock-ok {
+  background: #e8f5f2;
+  color: #237c72;
+}
+
+.stock-low {
+  background: #fff4d9;
+  color: #9a6b00;
+}
+
+.stock-empty {
+  background: #fde9e7;
+  color: #c0392b;
+}
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.edit-product-button,
+.delete-product-button {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.edit-product-button {
+  width: 38px;
+  height: 36px;
+  background: #fff4d9;
+  color: #9a6b00;
+}
+
+.edit-product-button:hover {
+  background: #ffe8a8;
+}
+
+.delete-product-button {
+  width: 38px;
+  height: 36px;
+  background: #fde9e7;
+  color: #c0392b;
+}
+
+.delete-product-button:hover {
+  background: #f8d1cc;
+}
+
+/* =====================================================
+   AUCUN PRODUIT
+===================================================== */
+
+.empty-products {
+  padding: 60px 20px;
+  text-align: center;
+  color: #71817f;
+}
+
+.empty-products-icon {
+  margin-bottom: 12px;
+  font-size: 45px;
+}
+
+.empty-products h2 {
+  margin: 0 0 8px;
+  color: #123c3a;
+  font-size: 20px;
+}
+
+.empty-products p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.product-modal-overlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(18, 60, 58, 0.45);
+}
+
+.product-modal {
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid #e1ece9;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 20px 50px rgba(18, 60, 58, 0.18);
+}
+
+/* =====================================================
+   HEADER MODAL
+===================================================== */
+
+.product-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 25px 28px 20px;
+  border-bottom: 1px solid #e1ece9;
+}
+
+.modal-label {
+  display: block;
+  margin-bottom: 7px;
+  color: #2a9d8f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.product-modal-header h2 {
+  margin: 0;
+  color: #123c3a;
+  font-size: 22px;
+}
+
+.modal-close-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 8px;
+  background: #eef3f1;
+  color: #58706c;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.modal-close-button:hover {
+  background: #dfe9e5;
+}
+
+/* =====================================================
+   FORMULAIRE
+===================================================== */
+
+.product-form {
+  padding: 25px 28px 28px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #345653;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 13px;
+  border: 1px solid #d6e5e1;
+  border-radius: 10px;
+  outline: none;
+  background: #fbfdfc;
+  color: #263f3d;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.form-group input {
+  height: 44px;
+}
+
+.form-group textarea {
+  min-height: 105px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #2a9d8f;
+  box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.12);
+  background: white;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* =====================================================
+   BOUTONS MODAL
+===================================================== */
+
+.product-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #e1ece9;
+}
+
+.cancel-product-button,
+.save-product-button {
+  padding: 11px 18px;
+  border: none;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-product-button {
+  background: #e7efed;
+  color: #345653;
+}
+
+.cancel-product-button:hover {
+  background: #d9e6e2;
+}
+
+.save-product-button {
+  background: #2a9d8f;
+  color: white;
+}
+
+.save-product-button:hover {
+  background: #21867a;
+}
+
+.cancel-product-button:disabled,
+.save-product-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   TABLETTE
+===================================================== */
+
+@media (max-width: 850px) {
+  .admin-products-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .add-product-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .products-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .product-search {
+    width: 100%;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+  .admin-products-page {
+    padding: 25px 15px 50px;
+  }
+
+  .admin-products-header h1 {
+    font-size: 26px;
+  }
+
+  .products-table-container {
+    border-radius: 12px;
+  }
+
+  .product-modal-overlay {
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .product-modal {
+    max-height: 94vh;
+    margin-top: 10px;
+  }
+
+  .product-modal-header {
+    padding: 20px;
+  }
+
+  .product-form {
+    padding: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .product-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-product-button,
+  .save-product-button {
+    width: 100%;
+  }
+}
+
+/* =====================================================
+   PETIT MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+  .admin-products-header h1 {
+    font-size: 24px;
+  }
+
+  .product-image-wrapper {
+    width: 48px;
+    height: 48px;
+  }
+}

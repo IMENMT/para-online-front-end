@@ -1,0 +1,424 @@
+
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e8efec;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  min-height: 70px;
+  margin: auto;
+  padding: 0 25px;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+  color: #173b35;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.navbar-logo span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  background: #0f9d7a;
+  color: white;
+
+  font-size: 20px;
+}
+
+/* =========================
+   CONTENU
+========================= */
+
+.navbar-content {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #4d625d;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  padding: 8px 5px;
+
+  transition: 0.2s;
+}
+
+.navbar-link:hover {
+  color: #0f9d7a;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Panier */
+
+.cart-link {
+  text-decoration: none;
+
+  color: #0f9d7a;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  padding: 9px 12px;
+  border-radius: 8px;
+
+  transition: 0.2s;
+}
+
+.cart-link:hover {
+  background: #eaf7f3;
+}
+
+/* Connexion */
+
+.navbar-login {
+  text-decoration: none;
+
+  color: #0f9d7a;
+
+  font-weight: 600;
+  font-size: 14px;
+
+  padding: 9px 10px;
+}
+
+.navbar-login:hover {
+  color: #0c8568;
+}
+
+/* Inscription */
+
+.navbar-register {
+  text-decoration: none;
+
+  padding: 10px 17px;
+
+  border-radius: 8px;
+
+  background: #0f9d7a;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.navbar-register:hover {
+  background: #0c8568;
+}
+
+/* =========================
+   USER
+========================= */
+
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-icon {
+  font-size: 20px;
+}
+
+.user-name {
+  max-width: 130px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: #173b35;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.logout-button {
+  margin-left: 5px;
+
+  padding: 8px 12px;
+
+  border: 1px solid #0f9d7a;
+  border-radius: 7px;
+
+  background: white;
+  color: #0f9d7a;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.logout-button:hover {
+  background: #0f9d7a;
+  color: white;
+}
+
+/* =========================
+   BOUTON HAMBURGER
+========================= */
+
+.navbar-toggle {
+  display: none;
+
+  margin-left: auto;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid #d8e8e3;
+  border-radius: 8px;
+
+  background: white;
+  color: #0f9d7a;
+
+  font-size: 22px;
+
+  cursor: pointer;
+}
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media (max-width: 1050px) {
+  .navbar-container {
+    padding: 0 18px;
+    gap: 15px;
+  }
+
+  .navbar-menu {
+    gap: 12px;
+  }
+
+  .navbar-link {
+    font-size: 13px;
+  }
+
+  .user-name {
+    max-width: 90px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .navbar-container {
+    min-height: 65px;
+    padding: 0 15px;
+
+    flex-wrap: wrap;
+  }
+
+  /* Afficher hamburger */
+
+  .navbar-toggle {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Menu fermé */
+
+  .navbar-content {
+    display: none;
+
+    width: 100%;
+
+    flex-direction: column;
+    align-items: stretch;
+
+    padding: 15px 0 20px;
+
+    border-top: 1px solid #e8efec;
+  }
+
+  /* Menu ouvert */
+
+  .navbar-content-open {
+    display: flex;
+  }
+
+  /* Liens */
+
+  .navbar-menu {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 3px;
+  }
+
+  .navbar-link {
+    display: block;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px 15px;
+
+    border-radius: 7px;
+
+    font-size: 14px;
+  }
+
+  .navbar-link:hover {
+    background: #eaf7f3;
+  }
+
+  /* Actions */
+
+  .navbar-actions {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 6px;
+
+    margin-top: 10px;
+    padding-top: 12px;
+
+    border-top: 1px solid #e8efec;
+  }
+
+  .cart-link,
+  .navbar-login,
+  .navbar-register {
+    width: 100%;
+    box-sizing: border-box;
+
+    text-align: center;
+  }
+
+  /* Utilisateur */
+
+  .user-menu {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 8px;
+  }
+
+  .user-icon {
+    text-align: center;
+  }
+
+  .user-name {
+    max-width: none;
+
+    text-align: center;
+  }
+
+  .logout-button {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+/* =========================
+   PETIT MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .navbar-logo {
+    font-size: 18px;
+  }
+
+  .navbar-logo span {
+    width: 31px;
+    height: 31px;
+
+    font-size: 18px;
+  }
+
+  .navbar-toggle {
+    width: 40px;
+    height: 40px;
+  }
+}
+.message-badge {
+  background-color: #e74c3c;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  min-width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  padding: 2px 5px;
+}

@@ -1,0 +1,166 @@
+
+.orders-page {
+  min-height: calc(100vh - 70px);
+  background: #f5f9f8;
+  padding: 40px 20px;
+}
+
+.orders-container {
+  max-width: 950px;
+  margin: auto;
+}
+
+.orders-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.orders-header h1 {
+  color: #123c3a;
+  margin-bottom: 8px;
+}
+
+.orders-header p {
+  color: #687a76;
+}
+
+.empty-orders {
+  background: white;
+  padding: 40px;
+  text-align: center;
+  border-radius: 15px;
+  color: #687a76;
+}
+
+.order-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 20px rgba(18, 60, 58, 0.08);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #e5eeeb;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.order-header h2 {
+  margin: 0;
+  color: #123c3a;
+  font-size: 20px;
+}
+
+.order-date {
+  margin: 6px 0 0;
+  color: #7b8b87;
+  font-size: 13px;
+}
+
+.order-status {
+  background: #eaf7f3;
+  color: #2a9d8f;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Coordonnées */
+.customer-info {
+  background: #f5f9f8;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 22px;
+}
+
+.customer-info h3,
+.order-products h3 {
+  color: #123c3a;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.customer-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.customer-info-grid strong {
+  color: #123c3a;
+  font-size: 13px;
+}
+
+.customer-info-grid p {
+  margin: 5px 0 0;
+  color: #687a76;
+  font-size: 14px;
+}
+
+/* Produits */
+.order-products {
+  margin-bottom: 20px;
+}
+
+.order-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #edf2f0;
+}
+
+.order-product strong {
+  color: #123c3a;
+}
+
+.order-product p {
+  margin: 5px 0 0;
+  color: #687a76;
+  font-size: 13px;
+}
+
+/* Total */
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+  border-top: 2px solid #e5eeeb;
+  color: #123c3a;
+  font-size: 18px;
+}
+
+.order-total strong {
+  color: #2a9d8f;
+}
+
+@media (max-width: 600px) {
+  .orders-page {
+    padding: 25px 15px;
+  }
+
+  .order-card {
+    padding: 18px;
+  }
+
+  .order-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .customer-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-product {
+    gap: 15px;
+  }
+}

@@ -1,0 +1,157 @@
+
+.contact-page {
+  min-height: 100vh;
+  background: #f5f9f8;
+  padding: 50px 20px 70px;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-header h1 {
+  margin: 0 0 10px;
+  color: #123c3a;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.contact-header p {
+  margin: 0;
+  color: #71817f;
+  font-size: 15px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 25px;
+}
+
+.contact-info-card,
+.contact-form-card {
+  background: white;
+  border: 1px solid #e1ece9;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(18, 60, 58, 0.06);
+}
+
+.contact-info-card h2,
+.contact-form-card h2 {
+  margin: 0 0 28px;
+  color: #123c3a;
+  font-size: 21px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.contact-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #e8f5f2;
+  font-size: 20px;
+}
+
+.contact-info-item h3 {
+  margin: 0 0 5px;
+  color: #345653;
+  font-size: 14px;
+}
+
+.contact-info-item p {
+  margin: 0;
+  color: #71817f;
+  font-size: 14px;
+}
+
+.contact-form-group {
+  margin-bottom: 18px;
+}
+
+.contact-form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #345653;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.contact-form-group input,
+.contact-form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #d6e5e1;
+  border-radius: 10px;
+  background: #fbfdfc;
+  color: #263f3d;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+  border-color: #2a9d8f;
+  box-shadow: 0 0 0 3px rgba(42, 157, 143, 0.12);
+  background: white;
+}
+
+.contact-form-group textarea {
+  resize: vertical;
+}
+
+.contact-submit {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: #2a9d8f;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.contact-submit:hover {
+  background: #21867a;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 30px 15px 50px;
+  }
+
+  .contact-header h1 {
+    font-size: 28px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-card,
+  .contact-form-card {
+    padding: 22px;
+  }
+}
